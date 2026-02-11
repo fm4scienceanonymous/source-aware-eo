@@ -68,6 +68,15 @@ Install dependencies using your preferred package manager (e.g., pip or conda).
 
 ## Reproducing Results
 
+### Inputs
+
+Running the full pipeline requires:
+- GBIF occurrence download (filtered to the study area and basis-of-record types)
+- Study area polygons (island geometries)
+- TESSERA embeddings for the study area
+
+Paths/filenames are provided via script arguments or environment variables as indicated in each script.
+
 ### 1. Preprocess Occurrence Data
 
     python code/filter_gbif_occurrences.py
@@ -126,7 +135,7 @@ Pixels used as training positives or sampled negatives are excluded from ranking
 ## Reproducibility
 
 - Random seeds are fixed where applicable.
-- All reported results are generated using this pipeline.
+- The results in the submission were produced using this codebase and the described pipeline.
 - Logistic regression is used as an interpretable baseline.
 
 ---
